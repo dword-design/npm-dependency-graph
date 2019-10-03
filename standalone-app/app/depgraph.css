@@ -48,7 +48,8 @@
 
 .sprotty-edge.dev {
   fill: none;
-  stroke: #ccc;
+  stroke: #bbb;
+  stroke-dasharray: 1,4;
 }
 
 .sprotty-edge.dev > .arrow {

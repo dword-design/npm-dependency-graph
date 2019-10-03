@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2018 TypeFox
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -44,6 +44,7 @@ export class DependencyGraphNode extends RectangularNode {
 
 export interface DependencyGraphEdgeSchema extends SEdgeSchema {
     optional?: boolean
+    dev?: boolean
 }
 
 export function isEdge(element?: SModelElementSchema): element is DependencyGraphEdgeSchema {
@@ -52,6 +53,7 @@ export function isEdge(element?: SModelElementSchema): element is DependencyGrap
 
 export class DependencyGraphEdge extends SEdge {
     optional: boolean = false;
+    dev: boolean = false;
 
     constructor() {
         super();

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2018 TypeFox
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -68,6 +68,8 @@ export class NpmDependencyGraphGenerator implements IGraphGenerator {
                 node.url = `${this.websiteUrl}/package/${node.name}`;
                 if (versionData.dependencies)
                     result.push(...this.addDependencies(node, versionData.dependencies));
+                if (versionData.devDependencies)
+                    result.push(...this.addDependencies(node, versionData.devDependencies, false, true));
                 if (versionData.optionalDependencies)
                     result.push(...this.addDependencies(node, versionData.optionalDependencies, true));
                 if (versionData.peerDependencies)
@@ -122,7 +124,7 @@ export class NpmDependencyGraphGenerator implements IGraphGenerator {
         return undefined;
     }
 
-    addDependencies(node: DependencyGraphNodeSchema, dependencies: { [dep: string]: string }, optional?: boolean): DependencyGraphNodeSchema[] {
+    addDependencies(node: DependencyGraphNodeSchema, dependencies: { [dep: string]: string }, optional?: boolean, dev?: boolean): DependencyGraphNodeSchema[] {
         const targetNodes: DependencyGraphNodeSchema[] = [];
         for (const dep in dependencies) {
             const depNode = this.generateNode(dep, dependencies[dep]);
@@ -130,6 +132,7 @@ export class NpmDependencyGraphGenerator implements IGraphGenerator {
                 type: 'edge',
                 id: `dependency:${node.name}>${dep}`,
                 optional,
+                dev,
                 sourceId: node.id,
                 targetId: depNode.id
             };

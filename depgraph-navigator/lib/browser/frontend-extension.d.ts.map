@@ -1,0 +1,1 @@
+{"version":3,"file":"frontend-extension.d.ts","sourceRoot":"","sources":["../../src/browser/frontend-extension.ts"],"names":[],"mappings":"AASA,OAAO,EAAE,eAAe,EAAa,MAAM,WAAW,CAAC;AAKvD,OAAO,EAAE,gBAAgB,EAA6B,MAAM,yCAAyC,CAAC;AAUtG,OAAO,yBAAyB,CAAC;AACjC,OAAO,qCAAqC,CAAC;AAC7C,OAAO,sCAAsC,CAAC;;AAE9C,wBAuBG;AAEH,eAAO,MAAM,eAAe,EAAE,gBAG7B,CAAC"}

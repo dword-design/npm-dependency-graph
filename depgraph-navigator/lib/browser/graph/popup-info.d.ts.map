@@ -1,0 +1,1 @@
+{"version":3,"file":"popup-info.d.ts","sourceRoot":"","sources":["../../../src/browser/graph/popup-info.ts"],"names":[],"mappings":"AAQA,OAAO,EACH,mBAAmB,EAAE,uBAAuB,EAAE,gBAAgB,EAA4B,mBAAmB,EAChH,MAAM,SAAS,CAAC;AAGjB,qBACa,kBAAmB,YAAW,mBAAmB;IAE1D,aAAa,CAAC,OAAO,EAAE,uBAAuB,EAAE,OAAO,CAAC,EAAE,mBAAmB,GAAG,gBAAgB,GAAG,SAAS;CAiD/G"}
